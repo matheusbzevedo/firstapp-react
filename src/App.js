@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NavBar from './components/NavBar';
+import CarouselHome from './components/CarouselHome';
+import CardsProducts from './components/CardsProducts';
+import CardsDigimon from './components/CardsDigimon';
+import { Row, Container, Col } from 'react-bootstrap';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <NavBar/>
+            <CarouselHome/>
+            <br></br>
+            <Container>
+                <Row>
+                    <Col></Col>
+                    <Col>
+                        <h1 class="center">Produtos</h1>
+                    </Col>
+                    <Col></Col>
+                </Row>
+                <Row>
+                    <CardsProducts/>
+                </Row>
+                <br></br>
+                <Row>
+                    <CardsDigimon/>
+                </Row>
+            </Container>
+        </>
+    );
 }
 
 export default App;
